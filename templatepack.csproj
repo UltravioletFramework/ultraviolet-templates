@@ -1,15 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.2.7</PackageVersion>
+    <PackageVersion>1.2.8</PackageVersion>
     <PackageId>Ultraviolet.Templates</PackageId>
     <Title>Ultraviolet Framework Templates</Title>
-    <Authors>Cole Campbell</Authors>
+    <Authors>Cole Campbell,Robert Campbell</Authors>
     <Description>Templates to use when creating applications based on the Ultraviolet Framework.</Description>
-    <Summary>Templates to use when creating applications based on the Ultraviolet Framework.</Summary>
     <PackageTags>dotnet-new;templates;ultraviolet;gamedev</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
@@ -17,10 +16,10 @@
     <AssemblyName>templatepack</AssemblyName>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl />
-    <PackageProjectUrl>https://github.com/tlgkccampbell/ultraviolet</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/UltravioletFramework/ultraviolet</PackageProjectUrl>
     <Copyright>Copyright (C) Cole Campbell 2020</Copyright>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <RepositoryUrl>https://github.com/tlgkccampbell/ultraviolet-templates</RepositoryUrl>
+    <RepositoryUrl>https://github.com/UltravioletFramework/ultraviolet-templates</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   <ItemGroup>

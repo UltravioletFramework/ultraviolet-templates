@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UpfGame.Shared", "UpfGame.Shared\UpfGame.Shared.shproj", "{3E1C0C3C-1967-4AC7-BE58-636F7C8F9E56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpfGame.NETCore3", "UpfGame.NETCore3\UpfGame.NETCore3.csproj", "{AFBA0780-A3DA-45AB-9585-AA5764C60B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpfGame.NETCore", "UpfGame.NETCore\UpfGame.NETCore.csproj", "{AFBA0780-A3DA-45AB-9585-AA5764C60B31}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

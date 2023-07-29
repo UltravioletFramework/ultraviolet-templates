@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+    <RootNamespace>UvGame</RootNamespace>
+    <AssemblyName>UpfGame</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove=".template.config\**" />
+    <EmbeddedResource Remove=".template.config\**" />
+    <None Remove=".template.config\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" />
+    <PackageReference Include="Ultraviolet" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.BASS" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.FreeType2" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.OpenGL" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.Presentation" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.Presentation.Compiler" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.SDL2" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet.Shims.NETCore" Version="2023.7.0.3" />
+  </ItemGroup>
+
+  <Import Project="..\UpfGame.Shared\UpfGame.Shared.projitems" Label="Shared" />
+
+</Project>
