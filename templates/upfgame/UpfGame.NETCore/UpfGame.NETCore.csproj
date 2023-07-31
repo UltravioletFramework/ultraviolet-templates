@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ApplicationIcon />
     <StartupObject />
-    <RootNamespace>UvGame</RootNamespace>
+    <RootNamespace>UpfGame</RootNamespace>
     <AssemblyName>UpfGame</AssemblyName>
   </PropertyGroup>
 
