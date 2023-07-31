@@ -16,12 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ultraviolet" Version="2023.7.0.3" />
-    <PackageReference Include="Ultraviolet.BASS" Version="2023.7.0.3" />
-    <PackageReference Include="Ultraviolet.FreeType2" Version="2023.7.0.3" />
-    <PackageReference Include="Ultraviolet.OpenGL" Version="2023.7.0.3" />
-    <PackageReference Include="Ultraviolet.SDL2" Version="2023.7.0.3" />
-    <PackageReference Include="Ultraviolet.Shims.NETCore" Version="2023.7.0.3" />
+    <PackageReference Include="Ultraviolet" />
+    <PackageReference Include="Ultraviolet.BASS" />
+    <PackageReference Include="Ultraviolet.FreeType2" />
+    <PackageReference Include="Ultraviolet.OpenGL" />
+    <PackageReference Include="Ultraviolet.SDL2" />
+    <PackageReference Include="Ultraviolet.Shims.NETCore" />
   </ItemGroup>
 
   <Import Project="..\UvGame.Shared\UvGame.Shared.projitems" Label="Shared" />
