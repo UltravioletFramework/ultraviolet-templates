@@ -24,7 +24,7 @@ namespace UpfGame
             this.flags = flags;
         }
 
-        protected override UltravioletContext OnCreatingUltravioletContext()
+        protected override UltravioletContext OnCreatingUltravioletContext(Action<UltravioletContext, UltravioletFactory> factoryInitializer)
         {
             var configuration = new SDL2UltravioletConfiguration();
             configuration.EnableServiceMode = ShouldRunInServiceMode();
@@ -45,7 +45,7 @@ namespace UpfGame
 #endif
 //+:cnd:noEmit
 
-            return new SDL2UltravioletContext(this, configuration);
+            return new SDL2UltravioletContext(this, configuration, factoryInitializer);
         }
 
         protected override void OnInitialized()
