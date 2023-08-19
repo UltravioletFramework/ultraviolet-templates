@@ -11,22 +11,24 @@
     <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <ApplicationId>com.companyname.upfgame.android</ApplicationId>
-    <RootNamespace>UpfGame</RootNamespace>
-    <AssemblyName>UpfGame</AssemblyName>
+    <RootNamespace>UpfGame.Android</RootNamespace>
+    <AssemblyName>UpfGame.Android</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Ultraviolet"/>
-    <PackageReference Include="Ultraviolet.BASS"/>
-    <PackageReference Include="Ultraviolet.FreeType2"/>
-    <PackageReference Include="Ultraviolet.OpenGL"/>
-    <PackageReference Include="Ultraviolet.Presentation"/>
-    <PackageReference Include="Ultraviolet.SDL2"/>
-    <PackageReference Include="Ultraviolet.Shims.Android"/>
+    <PackageReference Include="Ultraviolet" />
+    <PackageReference Include="Ultraviolet.BASS" />
+    <PackageReference Include="Ultraviolet.FreeType2" />
+    <PackageReference Include="Ultraviolet.OpenGL" />
+    <PackageReference Include="Ultraviolet.Presentation" />
+    <PackageReference Include="Ultraviolet.SDL2" />
+    <PackageReference Include="Ultraviolet.Shims.Android" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Ultraviolet.Presentation.CompiledExpressions.dll" />
   </ItemGroup>
-  <Import Project="..\UpfGame.Shared\UpfGame.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\UpfGame.Shared\UpfGame.Shared.csproj" />
+  </ItemGroup>
   <Import Project="Ultraviolet.Android.targets" />
   <Import Project="Ultraviolet.Android.Presentation.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

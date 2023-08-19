@@ -2,7 +2,7 @@
 using Ultraviolet.Content;
 using Ultraviolet.UI;
 
-namespace UpfGame.UI.Screens
+namespace UpfGame.Shared.UI.Screens
 {
     public class GamePlayScreen : UIScreen
     {

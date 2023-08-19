@@ -1,7 +1,7 @@
 ﻿using System;
 using Ultraviolet.Presentation;
 
-namespace UpfGame.UI.Screens
+namespace UpfGame.Shared.UI.Screens
 {
     public sealed class GamePlayViewModel
     {

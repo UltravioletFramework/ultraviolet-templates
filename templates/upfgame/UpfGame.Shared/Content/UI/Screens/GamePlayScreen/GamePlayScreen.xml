@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <UIPanelDefinition>
   <StyleSheet>GamePlayScreenStyles</StyleSheet>
-  <View ViewModelType="UpfGame.UI.Screens.GamePlayViewModel, UpfGame">
+  <View ViewModelType="UpfGame.Shared.UI.Screens.GamePlayViewModel, UpfGame.Shared">
     <Grid Name="container">
       <Image Name="container-background"/>
 

@@ -24,6 +24,8 @@
     <PackageReference Include="Ultraviolet.Shims.NETCore" />
   </ItemGroup>
 
-  <Import Project="..\UvGame.Shared\UvGame.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\UvGame.Shared\UvGame.Shared.csproj" />
+  </ItemGroup>
 
 </Project>

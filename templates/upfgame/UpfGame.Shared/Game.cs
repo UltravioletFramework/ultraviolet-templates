@@ -8,25 +8,24 @@ using Ultraviolet.OpenGL;
 using Ultraviolet.Presentation;
 using Ultraviolet.Presentation.Styles;
 using Ultraviolet.SDL2;
-using UpfGame.UI.Screens;
+using UpfGame.Shared.UI.Screens;
 
-namespace UpfGame
+namespace UpfGame.Shared
 {
-    public partial class Game : UltravioletApplication
+    public partial class Game : UltravioletApplicationAdapter
     {
-        public Game()
-            : this(GameFlags.None)
+        public Game(IUltravioletApplicationAdapterHost host)
+            : this(host, GameFlags.None)
         { }
 
-        public Game(GameFlags flags)
-            : base("DEVELOPER_PLACEHOLDER", "APPLICATION_PLACEHOLDER")
+        public Game(IUltravioletApplicationAdapterHost host, GameFlags flags)
+            : base(host)
         {
             this.flags = flags;
         }
 
-        protected override UltravioletContext OnCreatingUltravioletContext(Action<UltravioletContext, UltravioletFactory> factoryInitializer)
+        protected override void OnConfiguring(UltravioletConfiguration configuration)
         {
-            var configuration = new SDL2UltravioletConfiguration();
             configuration.EnableServiceMode = ShouldRunInServiceMode();
             configuration.WatchViewFilesForChanges = ShouldDynamicallyReloadContent();
             configuration.Plugins.Add(new OpenGLGraphicsPlugin());
@@ -44,13 +43,10 @@ namespace UpfGame
             };
 #endif
 //+:cnd:noEmit
-
-            return new SDL2UltravioletContext(this, configuration, factoryInitializer);
         }
 
         protected override void OnInitialized()
         {
-            UsePlatformSpecificFileSource();
             base.OnInitialized();
         }
 
@@ -104,7 +100,7 @@ namespace UpfGame
         {
             if (Ultraviolet.GetInput().GetKeyboard().IsKeyPressed(Key.Escape))
             {
-                Exit();
+                Host.Exit();
             }
             base.OnUpdating(time);
         }

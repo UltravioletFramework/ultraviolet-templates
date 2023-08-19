@@ -5,8 +5,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <ApplicationIcon />
     <StartupObject />
-    <RootNamespace>UpfGame</RootNamespace>
-    <AssemblyName>UpfGame</AssemblyName>
+    <RootNamespace>UpfGame.NETCore</RootNamespace>
+    <AssemblyName>UpfGame.NETCore</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +27,8 @@
     <PackageReference Include="Ultraviolet.Shims.NETCore" />
   </ItemGroup>
 
-  <Import Project="..\UpfGame.Shared\UpfGame.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\UpfGame.Shared\UpfGame.Shared.csproj" />
+  </ItemGroup>
 
 </Project>

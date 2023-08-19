@@ -7,19 +7,17 @@ using Ultraviolet.Graphics;
 using Ultraviolet.Graphics.Graphics2D;
 using Ultraviolet.Input;
 using Ultraviolet.OpenGL;
-using Ultraviolet.SDL2;
 
-namespace UvGame
+namespace UvGame.Shared
 {
-    public partial class Game : UltravioletApplication
+    public class Game : UltravioletApplicationAdapter
     {
-        public Game()
-            : base("DEVELOPER_PLACEHOLDER", "APPLICATION_PLACEHOLDER")
+        public Game(IUltravioletApplicationAdapterHost host)
+            : base(host)
         { }
 
-        protected override UltravioletContext OnCreatingUltravioletContext(Action<UltravioletContext, UltravioletFactory> factoryInitializer)
+        protected override void OnConfiguring(UltravioletConfiguration configuration)
         {
-            var configuration = new SDL2UltravioletConfiguration();
             configuration.Plugins.Add(new OpenGLGraphicsPlugin());
             configuration.Plugins.Add(new BASSAudioPlugin());
             configuration.Plugins.Add(new FreeTypeFontPlugin());
@@ -34,13 +32,10 @@ namespace UvGame
             };
 #endif
 //+:cnd:noEmit
-
-            return new SDL2UltravioletContext(this, configuration, factoryInitializer);
         }
 
         protected override void OnInitialized()
         {
-            UsePlatformSpecificFileSource();
             base.OnInitialized();
         }
 
@@ -57,7 +52,7 @@ namespace UvGame
         {
             if (Ultraviolet.GetInput().GetKeyboard().IsKeyPressed(Key.Escape))
             {
-                Exit();
+                Host.Exit();
             }
             base.OnUpdating(time);
         }

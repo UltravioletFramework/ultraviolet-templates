@@ -11,18 +11,20 @@
     <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <ApplicationId>com.companyname.uvgame.android</ApplicationId>
-    <RootNamespace>UvGame</RootNamespace>
-    <AssemblyName>UvGame</AssemblyName>
+    <RootNamespace>UvGame.Android</RootNamespace>
+    <AssemblyName>UvGame.Android</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Ultraviolet"/>
-    <PackageReference Include="Ultraviolet.BASS"/>
-    <PackageReference Include="Ultraviolet.FreeType2"/>
-    <PackageReference Include="Ultraviolet.OpenGL"/>
-    <PackageReference Include="Ultraviolet.SDL2"/>
-    <PackageReference Include="Ultraviolet.Shims.Android"/>
+    <PackageReference Include="Ultraviolet" />
+    <PackageReference Include="Ultraviolet.BASS" />
+    <PackageReference Include="Ultraviolet.FreeType2" />
+    <PackageReference Include="Ultraviolet.OpenGL" />
+    <PackageReference Include="Ultraviolet.SDL2" />
+    <PackageReference Include="Ultraviolet.Shims.Android" />
   </ItemGroup>
-  <Import Project="..\UvGame.Shared\UvGame.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\UvGame.Shared\UvGame.Shared.csproj" />
+  </ItemGroup>
   <Import Project="Ultraviolet.Android.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

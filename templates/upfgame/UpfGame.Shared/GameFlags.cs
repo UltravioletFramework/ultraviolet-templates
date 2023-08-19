@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UpfGame
+namespace UpfGame.Shared
 {
     [Flags]
     public enum GameFlags
